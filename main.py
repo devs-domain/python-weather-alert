@@ -1,5 +1,6 @@
 import requests
 import smtplib
+import os
 
 
 my_email = os.environ.get("MY_EMAIL")
