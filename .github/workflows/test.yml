@@ -52,12 +52,12 @@ jobs:
             echo "API_KEY is configured"
           fi
 
-          if [ -z "$RECIPIENT" ]; then
-            echo "RECIPIENT secret is not set!"
+          if [ -z "$MY_RECEPIENT" ]; then
+            echo "MY_RECEPIENT secret is not set!"
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
-            echo "RECIPIENT is configured"
+            echo "MY_RECEPIENT is configured"
           fi
 
           echo ""
