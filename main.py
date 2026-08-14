@@ -6,7 +6,7 @@ import os
 my_email = os.environ.get("MY_EMAIL")
 my_password = os.environ.get("MY_PASSWORD")
 api_key = os.environ.get("API_KEY")
-recepient_email = os.environ.get("RECEPIENT")
+recepient_email = os.environ.get("MY_RECEPIENT")
 
 MY_LAT = 14.346370
 MY_LONG = 120.882347
