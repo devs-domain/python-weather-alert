@@ -25,6 +25,8 @@ jobs:
         env:
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          API_KEY: ${{ secrets.API_KEY }}
+          RECIPIENT: ${{ secrets.RECIPIENT }}
         run: |
           if [ -z "$MY_EMAIL" ]; then
             echo "MY_EMAIL secret is not set!"
@@ -40,6 +42,22 @@ jobs:
             exit 1
           else
             echo "MY_PASSWORD is configured"
+          fi
+
+          if [ -z "$API_KEY" ]; then
+            echo "API_KEY secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "API_KEY is configured"
+          fi
+
+          if [ -z "$RECIPIENT" ]; then
+            echo "RECIPIENT secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "RECIPIENT is configured"
           fi
 
           echo ""
